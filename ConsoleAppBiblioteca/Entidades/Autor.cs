@@ -8,15 +8,16 @@ namespace ConsoleAppBiblioteca.Entidades
 {
     public class Autor
     {
+        public int Id { get; set; }
         public int Codigo { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public Livro Livros { get; set; }
-        public Autor(string nome,string sobrenome,Livro livros)
+       // public Livro Livros { get; set; }
+        public Autor(string nome,string sobrenome)
         {
             Nome = nome;
             Sobrenome = sobrenome;  
-            Livros = livros;
+            //Livros = livros;
 
         } 
     }

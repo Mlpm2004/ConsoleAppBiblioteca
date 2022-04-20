@@ -8,9 +8,10 @@ namespace ConsoleAppBiblioteca.Entidades
 {
     public class Categoria
     {
+        public int Id { get; set; }
         public int Codigo { get; set; }
         public string Nome { get; set; }
-        public Livro Livros { get; set; }
+        //public Livro Livros { get; set; }
         public Categoria()
         {
              
