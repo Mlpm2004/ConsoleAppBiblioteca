@@ -14,8 +14,7 @@ namespace ConsoleAppBiblioteca.Entidades
         public int CodigoAutor { get; set; }
         public string Titulo { get; set; }
         public int AnoPublicacao { get; set; }
-     //   public Categoria Categoria { get; set; }
-     //   public Autor Autor { get; set; }
-         
+        public Categoria Categoria { get; private set; }
+        public Autor Autor { get; private set; }
     }
 }

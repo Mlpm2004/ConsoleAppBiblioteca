@@ -1,19 +1,20 @@
 ﻿using ConsoleAppBiblioteca.Entidades;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConsoleAppBiblioteca.Context
 {
     public class DataContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DataContext(DbContextOptions options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            optionsBuilder.UseNpgsql(
-                "Host=localhost;Port=5432;Pooling=true;Database=Biblioteca;User Id=postgres;Password=mlpm2004"
-            );
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         public DbSet<Livro> Livros { get; set; }
-        public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<Autor> Autor { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Autor> Autores { get; set; }
     }
 }
