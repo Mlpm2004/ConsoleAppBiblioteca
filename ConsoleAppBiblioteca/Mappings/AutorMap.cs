@@ -17,10 +17,10 @@ namespace ConsoleAppBiblioteca.Mappings
                 .HasColumnType("int")
                 .HasColumnName("Codigo");
             builder.Property(a => a.Nome)
-                .HasColumnType("varchar(150)")
+                .HasColumnType("varchar(100)")
                 .HasColumnName("Nome");
             builder.Property(a => a.Sobrenome)
-                .HasColumnType("varchar(150)")
+                .HasColumnType("varchar(100)")
                 .HasColumnName("Sobrenome");
             
         }
