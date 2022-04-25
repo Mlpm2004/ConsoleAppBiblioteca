@@ -18,6 +18,5 @@ using (var db = new DataContext())
     {
         db.Database.ExecuteSqlRaw("DELETE FROM \"Categorias\"");
     }
-    //db.Autor.Add(new Autor("Domain-Driven Design: Tackling Complexity in the Heart of Software", "Eric Evans"));
     db.SaveChanges();
 }

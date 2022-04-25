@@ -13,6 +13,11 @@ namespace ConsoleAppBiblioteca.Entidades
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public ICollection<Livro> Livros { get; private set; }
+        public Autor(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
     }
 
 }

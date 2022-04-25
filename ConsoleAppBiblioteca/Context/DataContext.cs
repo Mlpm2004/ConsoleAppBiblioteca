@@ -11,7 +11,7 @@ namespace ConsoleAppBiblioteca.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(
-                "Host=localhost;Port=5432;Database=EFCore;User Id=postgres;Password=123456;"
+                "Host=localhost;Port=5432;Database=Biblioteca;User Id=postgres;Password=mlpm2004;"
             );
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

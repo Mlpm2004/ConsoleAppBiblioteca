@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ConsoleAppBiblioteca.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220425211153_AlteracaoTamanhoCampoNomeSobrenomeAutor")]
-    partial class AlteracaoTamanhoCampoNomeSobrenomeAutor
+    [Migration("20220425225828_CriacaoDoBancoDeDados")]
+    partial class CriacaoDoBancoDeDados
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,12 +37,12 @@ namespace ConsoleAppBiblioteca.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("varchar(150)")
                         .HasColumnName("Nome");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("varchar(150)")
                         .HasColumnName("Sobrenome");
 
                     b.HasKey("Codigo");

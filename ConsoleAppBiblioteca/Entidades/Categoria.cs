@@ -12,6 +12,15 @@ namespace ConsoleAppBiblioteca.Entidades
         public int Codigo { get; set; }
         public string Nome { get; set; }
         public ICollection<Livro> Livros { get; private set; }
-        
+        public Categoria(string nome)
+        {
+            Nome = nome;
+        }
+
+        public Categoria(int id, string nome)
+        {
+            Id = id;
+            Nome = nome;
+        }
     }
 }

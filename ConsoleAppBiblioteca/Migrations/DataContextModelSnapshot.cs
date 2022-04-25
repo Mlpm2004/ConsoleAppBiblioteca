@@ -35,17 +35,17 @@ namespace ConsoleAppBiblioteca.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("varchar(150)")
                         .HasColumnName("Nome");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("varchar(150)")
                         .HasColumnName("Sobrenome");
 
                     b.HasKey("Codigo");
 
-                    b.ToTable("Autores");
+                    b.ToTable("Autores", (string)null);
                 });
 
             modelBuilder.Entity("ConsoleAppBiblioteca.Entidades.Categoria", b =>
@@ -67,7 +67,7 @@ namespace ConsoleAppBiblioteca.Migrations
 
                     b.HasKey("Codigo");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
                 });
 
             modelBuilder.Entity("ConsoleAppBiblioteca.Entidades.Livro", b =>
@@ -102,7 +102,7 @@ namespace ConsoleAppBiblioteca.Migrations
 
                     b.HasIndex("CodigoCategoria");
 
-                    b.ToTable("Livros");
+                    b.ToTable("Livros", (string)null);
                 });
 
             modelBuilder.Entity("ConsoleAppBiblioteca.Entidades.Livro", b =>
