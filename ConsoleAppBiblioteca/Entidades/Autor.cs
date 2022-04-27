@@ -13,8 +13,9 @@ namespace ConsoleAppBiblioteca.Entidades
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public ICollection<Livro> Livros { get; private set; }
-        public Autor(string nome, string sobrenome)
+        public Autor(int codigo,string nome, string sobrenome)
         {
+            Codigo = codigo;
             Nome = nome;
             Sobrenome = sobrenome;
         }

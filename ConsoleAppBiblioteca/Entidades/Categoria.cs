@@ -17,9 +17,9 @@ namespace ConsoleAppBiblioteca.Entidades
             Nome = nome;
         }
 
-        public Categoria(int id, string nome)
+        public Categoria(int codigo, string nome)
         {
-            Id = id;
+            Codigo = codigo;
             Nome = nome;
         }
     }

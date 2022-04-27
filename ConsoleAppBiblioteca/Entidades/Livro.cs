@@ -16,19 +16,14 @@ namespace ConsoleAppBiblioteca.Entidades
         public int AnoPublicacao { get; set; }
         public Categoria Categoria { get; private set; }
         public Autor Autor { get; private set; }
-        public Livro(string titulo, int categoriaId, int autorId, DateTime dataPublicacao, decimal preco)
+        public Livro(string titulo, int codigoCategoria, int codigoAutor)
         {
             Titulo = titulo;
-            CodigoCategoria = categoriaId;
-            CodigoAutor = autorId;
+            CodigoCategoria = codigoCategoria;
+            CodigoAutor = codigoAutor;
  
         }
 
-        public void AlterarDados(string titulo, int categoriaId, int autorId, DateTime dataPublicacao, decimal preco)
-        {
-            Titulo = titulo;
-            CodigoCategoria = categoriaId;
-            CodigoAutor = autorId;
-         }
+
     }
 }

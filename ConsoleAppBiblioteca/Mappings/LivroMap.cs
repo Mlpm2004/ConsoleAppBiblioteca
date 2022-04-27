@@ -12,6 +12,9 @@ namespace ConsoleAppBiblioteca.Mappings
             // Primary key
             builder.HasKey(l => l.Codigo);
             // Properties
+            builder.Property(l => l.CodigoCategoria)
+                .HasColumnType("int")
+                .HasColumnName("CodigoCategoria");
             builder.Property(l => l.Codigo)
                 .HasColumnType("int")
                 .HasColumnName("Codigo");
